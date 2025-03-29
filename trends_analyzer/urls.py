@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from trends import views  # Importa las vistas de la app trends
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('trends/', views.google_trends, name='google_trends'),
 ]
