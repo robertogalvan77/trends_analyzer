@@ -1,0 +1,22 @@
+<!-- templates/trends/youtube_trends.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tendencias de YouTube</title>
+</head>
+<body>
+    <h1>Videos Populares en YouTube</h1>
+    <ul>
+        {% for trend in trends %}
+            <li>
+                <h3>{{ trend.snippet.title }}</h3>
+                <a href="https://www.youtube.com/watch?v={{ trend.id }}" target="_blank">
+                    Ver video
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

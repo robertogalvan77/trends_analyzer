@@ -21,4 +21,5 @@ from trends import views  # Importa las vistas de la app trends
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('trends/', views.google_trends, name='google_trends'),
+    path('youtube/', views.youtube_trends, name='youtube_trends'),
 ]
