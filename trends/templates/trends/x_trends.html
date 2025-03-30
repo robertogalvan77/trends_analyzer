@@ -1,0 +1,16 @@
+<!-- trends/templates/trends/x_trends.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tendencias de X</title>
+</head>
+<body>
+    <h1>Tendencias de X (Twitter)</h1>
+    <ul>
+        {% for trend in trends %}
+            <li>{{ trend }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
