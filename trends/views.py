@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .google_trends import get_google_trends  # Importa la función
 from .youtube_trends import get_youtube_trends
+from .x_trends import get_trends
 
 def google_trends(request):
     """Obtiene las tendencias de Google."""
@@ -22,3 +23,8 @@ def youtube_trends(request):
     # Obtener las tendencias de YouTube
     trends = get_youtube_trends()
     return render(request, 'trends/youtube_trends.html', {'trends': trends})
+
+
+def x_trends(request):
+    trends = get_trends()
+    return render(request, 'trends/x_trends.html', {'trends': trends})
